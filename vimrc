@@ -98,6 +98,8 @@ let g:snippetsEmu_key = "<S-Tab>"
 " will use completion if not at beginning
 set wildmode=list:longest,list:full
 set complete=.,w,t
+
+" Indent if we're at the beginning of a line. Else, do completion.
 function! InsertTabWrapper()
     let col = col('.') - 1
     if !col || getline('.')[col - 1] !~ '\k'
@@ -109,6 +111,10 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
+" Tags
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 " Index ctags from any project, including those outside Rails
