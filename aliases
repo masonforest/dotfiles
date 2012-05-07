@@ -17,6 +17,8 @@ alias gci="git pull --rebase && rake && git push"
 
 # Bundler
 alias b="bundle"
+alias be="bundle exec"
+alias bake="bundle exec rake"
 
 # Tests and Specs
 alias t="ruby -I test"
