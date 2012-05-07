@@ -185,3 +185,5 @@ endfunction
 function! RunSpecs(command)
   execute ":w\|!clear && echo " . a:command . " && echo && " . a:command
 endfunction
+" Syntax highlight Gemfile
+au BufRead,BufNewFile Gemfile set filetype=ruby
