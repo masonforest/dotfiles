@@ -20,12 +20,11 @@ alias gci="git pull --rebase && rake && git push"
 
 # Bundler
 alias b="bundle"
-alias be="bundle exec"
-alias bake="bundle exec rake"
 
 # Tests and Specs
 alias t="ruby -I test"
-alias cuc="bundle exec cucumber"
+alias s="rspec"
+alias cuc="cucumber"
 
 # Rubygems
 alias gi="gem install"
@@ -37,6 +36,9 @@ alias m="migrate"
 alias rk="rake"
 alias s="rspec"
 alias z="zeus"
+alias migrate="rake db:migrate db:test:prepare"
+alias remigrate="rake db:migrate db:migrate:redo db:schema:dump db:test:prepare"
+alias remongrate="rake mongoid:migrate mongoid:migrate:redo"
 
 # Heroku staging
 alias staging='heroku run console --remote staging'
