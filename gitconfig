@@ -33,3 +33,5 @@
 	email = mason@thoughtbot.com
 [github]
 	user = masonforest
+[heroku]
+	account = thoughtbot

@@ -81,6 +81,9 @@ if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor
 endif
 
+au BufNewFile,BufRead *.jbuilder set filetype=ruby
+au BufNewFile,BufRead *.hamlc set filetype=haml
+
 " Color scheme
 colorscheme vividchalk
 highlight NonText guibg=#060606

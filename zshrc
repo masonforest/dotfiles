@@ -58,6 +58,8 @@ export EYRC=./.eyrc
 setopt auto_pushd
 export dirstacksize=5
 
+source ".threadflip"
+
 # awesome cd movements from zshkit
 setopt AUTOCD
 setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
