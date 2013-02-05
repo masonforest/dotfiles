@@ -17,15 +17,15 @@
   merge-branch = !git checkout master && git merge @{-1} --ff-only
   rebase-origin = !git fetch origin && git rebase origin/master
   st = status
-[core]
-  excludesfile = ~/.gitignore
-  autocrlf = input
   wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\""
   unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
   ci = commit -v
   st = status 
   up = !git fetch origin && git rebase origin/master
   mm = !git checkout master && git merge @{-1} --ff-only
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
 [color]
   ui = true
 [user]
